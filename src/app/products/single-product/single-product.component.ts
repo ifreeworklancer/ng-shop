@@ -27,8 +27,8 @@ export class SingleProductComponent implements OnInit {
       this.productId = +params['id'];
     });
 
-    this.productService.products$.subscribe(data => {
-      this.product = data.find(item => item.id === this.productId);
+    this.productService.products$.subscribe(res => {
+      this.product = res.find(item => item.id === this.productId);
     })
   }
 

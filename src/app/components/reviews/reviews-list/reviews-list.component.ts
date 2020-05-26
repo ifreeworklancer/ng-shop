@@ -22,7 +22,7 @@ export class ReviewsListComponent implements OnInit {
     this.updateListReviews();
   }
 
-  public submitReview(data) {
+  public submitReview(event) {
     this.reviewsService.getReviews(this.productId);
     this.updateListReviews(true);
   }

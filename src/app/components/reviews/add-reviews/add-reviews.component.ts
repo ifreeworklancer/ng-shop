@@ -39,9 +39,9 @@ export class AddReviewsComponent implements OnInit {
 
     this.loading = true;
 
-    this.reviewsService.addReviews(this.productId, this.addReview.value).subscribe(data => {
+    this.reviewsService.addReviews(this.productId, this.addReview.value).subscribe(res => {
       this.loading = false;
-      data.success ? (this.submitReview.emit(data.success), this.addReview.reset({ text: '', rate: 5 }), this.submitted = false) : (this.alertService.error(data.message));
+      res.success ? (this.submitReview.emit(res.success), this.addReview.reset({ text: '', rate: 5 }), this.submitted = false) : (this.alertService.error(res.message));
     });
   }
 
