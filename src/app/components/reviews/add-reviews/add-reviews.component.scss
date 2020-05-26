@@ -1,0 +1,23 @@
+@import "../../../../scss/config/variables";
+
+.add-reviews {
+  margin-bottom: 30px;
+
+  &-rate {
+    &-icon {
+      font-size: 1.5rem;
+      color: $gray-500;
+      transition: .3s;
+
+      &--filled {
+        color: $primary;
+      }
+    }
+
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+  }
+}

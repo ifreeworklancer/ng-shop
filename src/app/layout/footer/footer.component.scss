@@ -1,0 +1,12 @@
+@import "../../../scss/config/variables";
+
+#app-footer {
+  flex: 0 0 auto;
+  padding: 12px 0 12px;
+  border-top: 1px solid $gray-400;
+}
+
+.footer-copyright {
+  font-size: .75rem;
+  color: $gray-500;
+}

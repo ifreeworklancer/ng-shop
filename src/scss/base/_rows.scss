@@ -1,0 +1,28 @@
+.container {
+  @each $breakpoint, $gutter in $grid-gutter-widths {
+    @include media-breakpoint-up($breakpoint) {
+      @include make-container($gutter);
+    }
+  }
+}
+
+.row {
+  @each $breakpoint, $gutter in $grid-gutter-widths {
+    @include media-breakpoint-up($breakpoint) {
+      @include make-row($gutter);
+    }
+  }
+
+  .col,
+  .col, [class*='col-'] {
+    @each $breakpoint, $gutter in $grid-gutter-widths {
+      @include media-breakpoint-up($breakpoint) {
+        @include make-col-ready($gutter);
+      }
+    }
+  }
+
+  .col-auto {
+    @include make-col-auto();
+  }
+}

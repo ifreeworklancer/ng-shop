@@ -1,0 +1,19 @@
+.btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  color: #fff;
+  font-weight: 600;
+  transition: .5s;
+  z-index: 5;
+
+  &-outline-primary {
+    color: $body-color;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}

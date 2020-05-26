@@ -1,0 +1,16 @@
+<section id="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="previous-page">
+                    <a [routerLink]="page.previous_link">
+                        <svg>
+                            <use [attr.xlink:href]="env.baseUri + 'assets/icons.svg#arrow-prev'"></use>
+                        </svg>
+                        {{page.previous_title}}
+                    </a>
+                </h2>
+            </div>
+        </div>
+    </div>
+</section>

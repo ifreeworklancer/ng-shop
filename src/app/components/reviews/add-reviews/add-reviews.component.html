@@ -1,0 +1,37 @@
+<div class="add-reviews">
+    <div class="add-reviews__title">
+        Give feedback
+    </div>
+    <ng-container *ngIf="!currentUser">
+        <p>To leave a review you need to login</p>
+        <div class="d-flex align-items-center">
+            <a routerLink="/login" class="btn btn-primary">Login</a>
+            <div class="mx-3">or</div>
+            <a routerLink="/register" class="btn btn-outline-primary">Register</a>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="currentUser">
+        <form novalidate [formGroup]="addReview" (ngSubmit)="onSubmit()">
+            <div class="add-reviews-rate">
+                <ngb-rating formControlName="rate" [max]="5">
+                  <ng-template let-fill="fill">
+                    <span class="add-reviews-rate-icon" [class.add-reviews-rate-icon--filled]="fill === 100">&#9733;</span>
+                  </ng-template>
+                </ngb-rating>
+            </div>
+            <div class="form-column">
+                <div class="form-group" [ngClass]="{ 'is-invalid': submitted && formAddReview.text.errors }">
+                    <label for="text">Your message</label>
+                    <textarea formControlName="text" class="form-control" rows="3"></textarea>
+                    <div *ngIf="submitted && formAddReview.text.errors" class="invalid-message">
+                        <div *ngIf="formAddReview.text.errors.required">Your message is required</div>
+                    </div>
+                </div>
+                <button [disabled]="loading" class="btn btn-primary">
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                    Submit
+                </button>
+            </div>
+        </form>
+    </ng-container>
+</div>

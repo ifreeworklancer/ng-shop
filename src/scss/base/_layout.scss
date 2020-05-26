@@ -1,0 +1,14 @@
+  .simple-block {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid $gray-400;
+    border-radius: 5px;
+
+    &-hover {
+      transition: .5s;
+
+      &:hover {
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }

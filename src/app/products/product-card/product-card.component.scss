@@ -1,0 +1,35 @@
+@import "../../../scss/config/variables";
+
+.product-card {
+  position: relative;
+  display: block;
+  margin-bottom: 3px;
+  z-index: 5;
+  transition: .5s;
+
+  &-prev {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid $gray-400;
+    height: 240px;
+  }
+
+  &-body {
+    padding: 20px 30px 25px;
+  }
+
+  &__image {
+    max-width: 90%;
+    max-height: 90%;
+  }
+
+  &__title {
+    font-weight: normal;
+    margin-bottom: 6px;
+  }
+
+  &:hover {
+    z-index: 10;
+  }
+}

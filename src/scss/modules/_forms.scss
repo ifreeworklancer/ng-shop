@@ -1,0 +1,60 @@
+.form-column {
+
+  .btn {
+    width: 100%;
+  }
+}
+
+.form-group {
+  position: relative;
+
+  &.is-invalid {
+
+    label {
+      color: $danger;
+    }
+
+    .form-control {
+      color: $danger;
+      border-color: $danger;
+    }
+
+    .invalid-message {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+
+  label {
+    color: $gray-500;
+    font-size: .625rem;
+    margin-bottom: 5px;
+    transition: .5s;
+  }
+
+  .form-control {
+    height: auto;
+    padding: 12px 15px;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid $gray-400;
+    color: $body-color;
+    transition: .5s;
+
+    &::placeholder {
+      color: $gray-500;
+    }
+  }
+
+  .invalid-message {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    pointer-events: none;
+    font-size: .625rem;
+    color: $danger;
+    max-width: 60%;
+    transition: .5s;
+  }
+}

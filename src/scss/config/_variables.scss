@@ -1,0 +1,55 @@
+$primary: #FF862F;
+$secondary: #4B5F5F;
+$danger: #E95151;
+$green: #70DA6E;
+
+$gray-200: #FAFAFB;
+$gray-300: #F2F5F6;
+$gray-400: #E4ECEC;
+$gray-500: #94A6A6;
+$gray-600: #697477;
+
+$body-color: $secondary;
+$body-bg: $gray-200;
+
+$font-size-base: .875rem;
+$font-family-base: 'Proxima Nova',
+sans-serif;
+$headings-font-family: 'Proxima Nova',
+sans-serif;
+$font-weight-base: normal;
+$headings-font-weight: bold;
+
+$link-color: $body-color;
+$link-hover-decoration: none;
+
+$input-btn-border-width: 0;
+$input-btn-focus-width: 0;
+$input-btn-focus-color: rgba(#fff, 0);
+$input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color;
+$input-btn-font-family: $font-family-base;
+
+$btn-border-width: 1px;
+$border-radius: 5px;
+
+$btn-padding-y: 15px;
+$btn-padding-x: 20px;
+
+$h1-font-size: $font-size-base * 2.142;
+$h2-font-size: $font-size-base * 2.571;
+$h3-font-size: $font-size-base * 2.142;
+$h4-font-size: $font-size-base * 1.428;
+$h5-font-size: $font-size-base * 1.285;
+$h6-font-size: $font-size-base * 1.142;
+
+$grid-breakpoints: (xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px);
+
+$grid-gutter-widths: (xs: 30px,
+  sm: 30px,
+  md: 15px,
+  lg: 3px,
+);

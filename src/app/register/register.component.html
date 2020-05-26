@@ -1,0 +1,49 @@
+<section class="page-register">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-8 col-md-7 col-lg-6 col-xl-5">
+                <div class="page-register-header">
+                    <h1 class="section-title">
+                        Profile Registration
+                    </h1>
+                    <p>
+                        enter your email and create a strong password
+                    </p>
+                </div>
+                <div class="page-register-body">
+                    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                        <div class="form-column">
+                            <div class="form-group" [ngClass]="{ 'is-invalid': submitted && formRegister.username.errors }">
+                                <label for="username">Username</label>
+                                <input type="text" formControlName="username" class="form-control"/>
+                                <div *ngIf="submitted && formRegister.username.errors" class="invalid-message">
+                                    <div *ngIf="formRegister.username.errors.required">Username is required</div>
+                                </div>
+                            </div>
+                            <div class="form-group" [ngClass]="{ 'is-invalid': submitted && formRegister.password.errors }">
+                                <label for="password">Password</label>
+                                <input type="password" formControlName="password" class="form-control"/>
+                                <div *ngIf="submitted && formRegister.password.errors" class="invalid-message">
+                                    <div *ngIf="formRegister.password.errors.required">Password is required</div>
+                                    <div *ngIf="formRegister.password.errors.minlength">Password must be at least 6 characters</div>
+                                </div>
+                            </div>
+                            <button [disabled]="loading" class="btn btn-primary">
+                                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                                Register
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="page-register-footer">
+                    <p>
+                        I have a registered account
+                    </p>
+                    <a routerLink="/login" class="btn btn-outline-primary">
+                        Login
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

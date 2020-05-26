@@ -1,0 +1,53 @@
+@import "../../../scss/config/variables";
+
+#single-product {
+  padding: 20px 0 70px;
+}
+
+.product-gallery {
+  position: relative;
+  display: flex;
+
+  &-item {
+    position: relative;
+    width: 100%;
+    padding-bottom: 81.3186%;
+    overflow: hidden;
+    margin-bottom: 3px;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-height: 90%;
+    }
+  }
+}
+
+.product-description {
+  padding: 20px 0 25px;
+
+  @media (min-width: map_get($grid-breakpoints, md)) {
+    padding: 0 15px 25px;
+  }
+
+  p {
+    color: $gray-500;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+
+    p {
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

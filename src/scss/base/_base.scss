@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+  outline: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+section {
+  position: relative;
+  overflow: hidden;
+}
+
+a {
+  transition: 0.5s;
+}
+
+ul {
+  margin: 0;
+  @extend .list-unstyled;
+}
+
+figure {
+  margin: 0;
+}
+
+textarea {
+  resize: none;
+}

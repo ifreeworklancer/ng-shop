@@ -1,0 +1,7 @@
+<div class="reviews">
+    <app-add-reviews (submitReview)="submitReview($event)" [productId]="productId"></app-add-reviews>
+    <app-reviews-item *ngFor="let review of reviews$ | async | slice:0:limitShow" [review]="review"></app-reviews-item>
+    <div class="text-center mt-3" *ngIf="showLoadMore">
+        <span class="btn btn-primary" (click)="loadMore()">Load More</span>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+@import "../../../scss/config/variables";
+
+#app-header {
+  position: relative;
+  background: $gray-300;
+  padding: 20px 0;
+  z-index: 200;
+}
+
+.logo {
+  background: $gray-200;
+  padding: 10px 20px;
+  font-size: 1.125rem;
+  font-weight: bold;
+
+  @media (min-width: map_get($grid-breakpoints, md)) {
+    padding: 10px 30px;
+    font-size: 1.5rem;
+  }
+
+  @media (min-width: map_get($grid-breakpoints, lg)) {
+    padding: 10px 60px;
+    font-size: 1.625rem;
+  }
+}

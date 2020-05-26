@@ -1,0 +1,59 @@
+@import "../../../../scss/config/variables";
+
+.reviews-item {
+  padding: 10px 15px;
+  margin-bottom: 4px;
+
+  @media (min-width: map_get($grid-breakpoints, sm)) {
+    padding: 15px 25px;
+  }
+
+  &-prev {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 5px;
+  }
+
+  &-body {
+    border-top: 1px solid $gray-200;
+    padding-top: 15px;
+  }
+
+  &-rating {
+
+    &-icon {
+      position: relative;
+      display: inline-block;
+      font-size: 1rem;
+      color: $gray-500;
+
+      &--full {
+        color: $primary;
+      }
+    }
+
+  
+    &-half {
+      position: absolute;
+      display: inline-block;
+      overflow: hidden;
+      color: $primary;
+    }
+  }
+
+  &__name {
+    font-weight: bold;
+    font-size: 1.125rem;
+    margin-right: 15px;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__description {
+    word-break: break-all;
+  }
+}

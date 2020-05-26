@@ -1,0 +1,9 @@
+<section id="alert-message" *ngIf="message">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-md-7 col-lg-6 col-xl-5 mx-auto pt-4 text-center">
+                <div [ngClass]="message.cssClass">{{message.text}}</div>
+            </div>
+        </div>
+    </div>
+</section>

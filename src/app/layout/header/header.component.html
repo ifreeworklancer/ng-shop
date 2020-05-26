@@ -1,0 +1,24 @@
+<header id="app-header">
+    <div class="container">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-4">
+                <a routerLink="/" class="logo">
+                    LOGO
+                </a>
+            </div>
+            <div class="col-8 d-flex justify-content-end align-items-center">
+                <ng-container *ngIf="!currentUser">
+                    <a routerLink="/login" class="btn btn-primary mr-3 mr-lg-4">
+                        Login
+                    </a>
+                    <a routerLink="/register" class="btn btn-outline-primary">
+                        Register
+                    </a>
+                </ng-container>
+                <a *ngIf="currentUser" class="btn btn-outline-primary" (click)="logout()">
+                    Logout
+                </a>
+            </div>
+        </div>
+    </div>
+</header>

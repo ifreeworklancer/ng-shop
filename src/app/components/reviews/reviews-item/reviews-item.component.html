@@ -1,0 +1,20 @@
+<div class="reviews-item simple-block">
+    <div class="reviews-item-prev">
+        <div class="reviews-item__name">
+            {{review.created_by.username}}
+        </div>
+        <div class="reviews-item-stars">
+            <ng-template #t let-fill="fill">
+              <span class="reviews-item-rating-icon" [class.reviews-item-rating-icon--full]="fill === 100">
+                <span class="reviews-item-rating-half" [style.width.%]="fill">&#9733;</span>&#9733;
+              </span>
+            </ng-template>
+            <ngb-rating [rate]="review.rate" [starTemplate]="t" [readonly]="true" [max]="5"></ngb-rating>    
+        </div>
+    </div>
+    <div class="reviews-item-body">
+        <div class="reviews-item__description">
+            {{review.text}}
+        </div>
+    </div>
+</div>

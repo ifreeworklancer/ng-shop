@@ -1,0 +1,10 @@
+<a [routerLink]="['/', product.id,'single-product']" class="product-card simple-block simple-block-hover">
+    <div class="product-card-prev">
+        <img [src]="env.staticUri + product.img" alt="product image" class="product-card__image">
+    </div>
+    <div class="product-card-body">
+        <h5 class="product-card__title">
+            {{product.title}}
+        </h5>
+    </div>
+</a>

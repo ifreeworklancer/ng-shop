@@ -1,0 +1,31 @@
+@import "../../../scss/config/variables";
+
+#page-header {
+  padding: 20px 0;
+  background: $gray-200;
+}
+
+.previous-page {
+  display: flex;
+  align-items: center;
+
+  a {
+    color: $body-color;
+
+    svg {
+      position: relative;
+      left: 0;
+      margin-right: 10px;
+      width: 30px;
+      height: 30px;
+      fill: $primary;
+      transition: .5s;
+    }
+
+    &:hover {
+      svg {
+        left: -10px;
+      }
+    }
+  }
+}
